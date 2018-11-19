@@ -2,7 +2,7 @@
 <html>
 <head><title>Home</title></head>
 <body>
-	<form onSubmit="Start(Name)">
+	<form name = "box" onSubmit = "Start()">
 		<input type = "text" name = "person" id = "Name">
 		<input type = "submit" value = "submit">
 	</form>
@@ -10,16 +10,8 @@
 		import System.IO;
 		import System;  // Used for getting the date
 
-		function Start(text) {
-		    // Create an instance of StreamWriter to write text to a file.
-		    sw = new StreamWriter("names.txt");
-		    // Add some text to the file.
-		    sw.Write(text + DateTime.Now);
-		    sw.WriteLine("will i write");
-		    sw.WriteLine("-------------------");
-		    sw.Close();
-			
-		Start('james')
+		function Start() {
+		    var x = document.forms["box"]["Name"].value;
 		}
 	</script>
 </body>
