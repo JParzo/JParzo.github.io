@@ -6,6 +6,19 @@
 		<input type = "text" name = "person" id = "Name">
 		<input type = "submit" value = "submit">
 	</form>
-	<script src="save.js"></script>
+	<script>
+		function WriteToFile(passForm) {
+
+			set fso = CreateObject("Scripting.FileSystemObject"); 
+			set s   = fso.CreateTextFile("names.txt", True);
+
+			var name = document.getElementById('Name');
+
+			s.writeline(name);
+			s.writeline("-----------------------------");
+
+			s.Close();
+		}
+	</script>
 </body>
 </html>
