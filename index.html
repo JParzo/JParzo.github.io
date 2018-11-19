@@ -2,9 +2,10 @@
 <html>
 <head><title>Home</title></head>
 <body>
-	<form action = "/entries.txt">
-		<input type = "text" name = "person">
+	<form onSubmit="WriteToFile(this)">
+		<input type = "text" name = "person" id = "Name">
 		<input type = "submit">
 	</form>
+	<script src="save.js"></script>
 </body>
 </html>
